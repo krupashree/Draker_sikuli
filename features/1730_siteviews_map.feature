@@ -10,3 +10,8 @@ Scenario Outline: I want to verify equipment is displayed under SiteViews/Data A
 
      Given I click the "<project>" page
      When I click to "Site Views.png" links
+
+Examples: Project List 
+|project                    		         |                     
+|Lemoore District Office.png           |
+|Lemoore Engvall Elementary School.png |

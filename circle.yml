@@ -7,7 +7,11 @@ machine:
   # Customize dependencies
 dependencies:
   pre:
-    
+    - gem install sikuli
+    - gem install cucumber
+    - gem install capybara
+    - gem install selenium-webdriver
+    - bundle
     #- apt-get selenium-java-2.37.0
   override:
     #- bundle install: # note ':' here

@@ -28,7 +28,13 @@ def verify_underlined_link_to(name)
 end
 
 Sikuli::Config.run do |config|
-  config.image_path = "C:/Cucumber/ruby-capybara/ruby-capybara/features/Images"
+	path_name = File.absolute_path(File.join(File.dirname(__FILE__),"../Images"))
+  	# Finding the operating sysytem in case windows then replace the / slash with \
+    	if path_name.match(/^D:\//)
+      		path_name.gsub!(/\//, "\\")
+    	end 
+  puts path_name
+  config.image_path = path_name
   config.logging = false
   config.highlight_on_find = true
 end

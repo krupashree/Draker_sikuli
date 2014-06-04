@@ -32,9 +32,7 @@ database:
     #- bundle exec rake db:create db:schema:load
 
 ## Customize test commands
-test:
-  override:
-  - cucumber features/1730_siteviews_devices.feature
+
 #dependencies:
  # pre:
   #  - gem install sikuli

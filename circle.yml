@@ -1,0 +1,42 @@
+---
+machine:
+  timezone: America/New_York
+  ruby : 
+    version: jruby-1.7.12
+      
+  # Customize dependencies
+dependencies:
+  pre:
+    
+    #- apt-get selenium-java-2.37.0
+  override:
+    #- bundle install: # note ':' here
+     # timeout: 180 # fail if command has no output for 3 minutes
+
+  # we automatically cache and restore many dependencies between
+  # builds. If you need to, you can add custom paths to cache:
+  cache_directories:
+   # - "custom_1" # relative to the build directory
+  # - "~/custom_2" # relative to the user's home directory
+
+## Customize database setup
+database:
+  override:
+  
+    # replace Circle's generated database.yml
+    #- cp config/database.yml.ci config/database.yml
+    #- bundle exec rake db:create db:schema:load
+
+## Customize test commands
+test:
+  override:
+  - cucumber features/1730_siteviews_devices.feature
+#dependencies:
+ # pre:
+  #  - gem install sikuli
+  #  - gem install cucumber
+  #  - gem install capybara
+  #  - gem install selenium-webdriver
+  #  - bundle
+
+ 

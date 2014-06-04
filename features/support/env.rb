@@ -28,7 +28,7 @@ def verify_underlined_link_to(name)
 end
 
 Sikuli::Config.run do |config|
-	path_name = File.absolute_path(File.join(File.dirname(__FILE__),"../Images"))
+	path_name = File.absolute_path(File.join(File.dirname(__FILE__),"../Images/"))
   	# Finding the operating sysytem in case windows then replace the / slash with \
     	if path_name.match(/^D:\//)
       		path_name.gsub!(/\//, "\\")

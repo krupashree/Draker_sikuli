@@ -1,6 +1,9 @@
 ---
 machine:
   timezone: America/New_York
+
+  java:
+    version: oraclejdk6
   ruby : 
     version: jruby-1.7.12
       
